@@ -1,20 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react';
-
-const containerStyles = css`
-display: block;
-box-shadow: 0 0 4px rgba(0,0,0,0.3);
-height: 454px;
-width: 910px;
-margin: 25px;
-border-radius: 5px;
-`;
-
+import { jsx, css } from "@emotion/react";
+import ContentBlock from "../ContentBlock";
 
 function ProfileSettings() {
-  return <main css={containerStyles}>
-      ProfileSettings
-  </main>;
+  return (
+    <ContentBlock
+      title="Basic Profile"
+      description="The information can be edited from yuor profile page"
+      button={<button>Knopka</button>}
+    >
+      <div>Inputs I[ptn dmt ndmnt ddt</div>
+    </ContentBlock>
+  );
 }
 
 export default ProfileSettings;

@@ -1,8 +1,25 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-
+import { css } from "@emotion/react";
 
 const styles = css`
+  @font-face {
+    font-family: "Roboto";
+    src: url("/Roboto-Regular.woff2") format("woff2"),
+      url("/Roboto-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("/Roboto-Medium.woff2") format("woff2"),
+      url("/Roboto-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html,
   body,
   #root {
@@ -11,13 +28,8 @@ const styles = css`
 
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: Roboto, sans-serif;
   }
 `;
-
 
 export default styles;
