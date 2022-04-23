@@ -17,10 +17,19 @@ const containerStyles = css`
 
 const innerContainerStyles = css`
   display: flex;
+  gap: 25px;
+  align-items: flex-start;
   padding: 21px 21px 43px 21px;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
 `;
 
 const innerSecondContainerStyles = css`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   max-width: 910px;
   width: 100%;
 `;

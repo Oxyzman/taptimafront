@@ -5,14 +5,14 @@ import UserInfo from "./UserInfo";
 import Navigation from "./Navigation";
 import Support from "./Support";
 
-
 const containerStyles = css`
   grid-column: 1/2;
   grid-row: 2/3;
-  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 1000px) {
     grid-row: 1/2;
+    box-shadow: none;
   }
 `;
 
@@ -27,7 +27,7 @@ const baseHeaderStyles = css`
     left: 0;
     right: 0;
     bottom: 0;
-		overflow-y: auto;
+    overflow-y: auto;
   }
 `;
 
@@ -39,7 +39,7 @@ const buttonStyles = css`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-		border: none;
+    border: none;
     padding: 0;
     background: #3f51b5;
     cursor: pointer;
@@ -56,12 +56,9 @@ const buttonStyles = css`
   }
 `;
 
-
 function Header() {
- 
   const [isOpen, setIsOpen] = useState(false);
 
-  
   const headerStyles = css`
     ${baseHeaderStyles}
 

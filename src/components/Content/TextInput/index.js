@@ -1,0 +1,56 @@
+/** @jsxImportSource @emotion/react */
+import { jsx, css } from "@emotion/react";
+
+const containerStyles = css`
+  min-width: 220px;
+  max-width: 328px;
+  width: 100%;
+`;
+
+const inputStyles = css`
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 15px 16px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  border-radius: 4px;
+  background: white;
+
+  &:focus {
+    border-color: #1665d8;
+  }
+
+  &:focus + span {
+    color: #1665d8;
+  }
+`;
+
+const assistiveTextStyles = css`
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 3px;
+  padding-left: 18px;
+`;
+
+function TextInput(props) {
+  return (
+    <label css={containerStyles}>
+      <input
+        name={props.name}
+        type={props.type}
+        placeholder={props.placeholder}
+        css={inputStyles}
+      />
+      {props.assistiveText && (
+        <span css={assistiveTextStyles}>{props.assistiveText}</span>
+      )}
+    </label>
+  );
+}
+
+export default TextInput;

@@ -25,7 +25,7 @@ const listStyles = css`
     white-space: nowrap;
 
     &.active {
-      border-bottom: 1px solid #1665d8;
+      border-bottom: 3px solid #1665d8;
     }
   }
 `;
