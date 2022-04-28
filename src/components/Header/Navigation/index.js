@@ -1,18 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 import Link from "../Link";
-import dashSVG from "./dash.svg"
-import usersSVG from "./users.svg"
-import prodSVG from "./prod.svg"
-import authSVG from "./auth.svg"
-import typoSVG from "./typo.svg"
-import iconsSVG from "./icons.svg"
+import dashSVG from "./dash.svg";
+import usersSVG from "./users.svg";
+import prodSVG from "./prod.svg";
+import authSVG from "./auth.svg";
+import typoSVG from "./typo.svg";
+import iconsSVG from "./icons.svg";
 
 const containerStyles = css`
   margin: 20px 0;
   padding: 25px 0;
-  border-top: 1px solid #E4E7EB;
-  border-bottom: 1px solid #E4E7EB;
+  border-top: 1px solid #e4e7eb;
+  border-bottom: 1px solid #e4e7eb;
 `;
 
 const listStyles = css`
@@ -22,16 +22,24 @@ const listStyles = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 8px;
 
-    
+  & li {
+    padding: 14px 19px;
+
+    &.active {
+      background: #f6f9fd;
+      box-shadow: inset 3px 0 #1665d8;
+      border-radius: 4px;
+    }
+  }
 `;
 
 function Navigation() {
   return (
     <nav css={containerStyles}>
       <ul css={listStyles}>
-        <li>
+        <li className="active">
           <Link text="Dashboard" url="/dashboard" img={dashSVG} />
         </li>
         <li>
