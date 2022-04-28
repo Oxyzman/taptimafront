@@ -27,10 +27,24 @@ const listStyles = css`
   & li {
     padding: 14px 19px;
 
+    &:hover {
+      background: #f6f9fd;
+      box-shadow: inset 3px 0 #1665d8;
+      border-radius: 4px;
+      transition-duration: 0.5s;
+    }
+
     &.active {
       background: #f6f9fd;
       box-shadow: inset 3px 0 #1665d8;
       border-radius: 4px;
+
+      & img {
+        color: blue;
+      }
+      & span {
+        color: #212529;
+      }
     }
   }
 `;

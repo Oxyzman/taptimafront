@@ -34,7 +34,7 @@ const buttonStyles = css`
   line-height: 16px;
   text-transform: uppercase;
   border-radius: 5px;
-  transition-duration: 0.8s;
+  transition-duration: 0.5s;
 
   &:hover {
     background: #1665d8;

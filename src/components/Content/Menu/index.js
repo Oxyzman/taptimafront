@@ -24,6 +24,11 @@ const listStyles = css`
     color: black;
     white-space: nowrap;
 
+    &:hover {
+      border-bottom: 3px solid #1665d8;
+      transition-duration: 0.1s;
+    }
+
     &.active {
       border-bottom: 3px solid #1665d8;
     }

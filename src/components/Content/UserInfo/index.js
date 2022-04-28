@@ -58,10 +58,12 @@ const buttonStyles = css`
     letter-spacing: 1.25px;
     line-height: 16px;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   & button:hover {
     color: #1665d8;
+    transition-duration: 0.8s;
   }
 `;
 
