@@ -20,6 +20,10 @@ const labelStyles = css`
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.6);
+
+  &:hover {
+    color: #1665d8;
+  }
 `;
 
 const assistiveTextStyles = css`

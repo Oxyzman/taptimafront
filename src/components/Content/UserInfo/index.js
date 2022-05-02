@@ -63,7 +63,7 @@ const buttonStyles = css`
 
   & button:hover {
     color: #1665d8;
-    transition-duration: 0.8s;
+    transition-duration: 0.5s;
   }
 `;
 

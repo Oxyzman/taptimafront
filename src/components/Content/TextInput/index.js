@@ -20,6 +20,10 @@ const inputStyles = css`
   border-radius: 4px;
   background: white;
 
+  &:hover {
+    border-color: #1665d8;
+  }
+
   &:focus {
     border-color: #1665d8;
   }

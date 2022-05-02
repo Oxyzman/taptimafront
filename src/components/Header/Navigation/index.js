@@ -16,7 +16,7 @@ const containerStyles = css`
 `;
 
 const listStyles = css`
-  margin: 0 18px;
+  margin: 0 0;
   padding: 0;
   list-style: none;
   display: flex;

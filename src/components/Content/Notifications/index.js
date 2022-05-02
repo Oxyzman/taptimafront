@@ -35,6 +35,7 @@ const buttonStyles = css`
   text-transform: uppercase;
   border-radius: 5px;
   transition-duration: 0.5s;
+  cursor: pointer;
 
   &:hover {
     background: #1665d8;
