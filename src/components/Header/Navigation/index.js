@@ -7,6 +7,7 @@ import prodSVG from "./prod.svg";
 import authSVG from "./auth.svg";
 import typoSVG from "./typo.svg";
 import iconsSVG from "./icons.svg";
+import dashHoverSVG from "./dashHover.svg";
 
 const containerStyles = css`
   margin: 20px 0;
@@ -39,9 +40,6 @@ const listStyles = css`
       box-shadow: inset 3px 0 #1665d8;
       border-radius: 4px;
 
-      & img {
-        color: blue;
-      }
       & span {
         color: #212529;
       }
@@ -54,7 +52,7 @@ function Navigation() {
     <nav css={containerStyles}>
       <ul css={listStyles}>
         <li className="active">
-          <Link text="Dashboard" url="/dashboard" img={dashSVG} />
+          <Link text="Dashboard" url="/dashboard" img={dashHoverSVG} />
         </li>
         <li>
           <Link text="Users" url="/users" img={usersSVG} />

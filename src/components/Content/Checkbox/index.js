@@ -36,12 +36,12 @@ function Checkbox(props) {
   return (
     <label css={containerStyles}>
       <input css={checkboxStyles} name={props.name} type="checkbox" />
-      <div>
+      <span>
         <span css={labelStyles}>{props.label}</span>
         {props.assistiveText && (
           <span css={assistiveTextStyles}>{props.assistiveText}</span>
         )}
-      </div>
+      </span>
     </label>
   );
 }
