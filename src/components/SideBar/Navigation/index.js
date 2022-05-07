@@ -1,13 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 import Link from "../Link";
-import dashSVG from "./dash.svg";
+import dashHoverSVG from "./dashHover.svg";
 import usersSVG from "./users.svg";
 import prodSVG from "./prod.svg";
 import authSVG from "./auth.svg";
 import typoSVG from "./typo.svg";
 import iconsSVG from "./icons.svg";
-import dashHoverSVG from "./dashHover.svg";
 
 const containerStyles = css`
   margin: 20px 0;

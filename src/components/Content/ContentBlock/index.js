@@ -43,8 +43,10 @@ function ContentBlock(props) {
         <span css={titleTextStyles}>{props.title}</span>
         <span css={descriptionTextStyles}>{props.description}</span>
       </header>
-      <div css={contentStyles}>{props.children}</div>
-      <footer css={footerStyles}>{props.button}</footer>
+      <form>
+        <div css={contentStyles}>{props.children}</div>
+        <footer css={footerStyles}>{props.button}</footer>
+      </form>
     </section>
   );
 }

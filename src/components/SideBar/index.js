@@ -1,11 +1,11 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import { css, Global } from "@emotion/react";
+import styled from "@emotion/styled";
 import { useState } from "react";
 import UserInfo from "./UserInfo";
 import Navigation from "./Navigation";
 import Support from "./Support";
 
-const containerStyles = css`
+const Container = styled.div`
   grid-column: 1/2;
   grid-row: 2/3;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -16,7 +16,7 @@ const containerStyles = css`
   }
 `;
 
-const baseHeaderStyles = css`
+const Content = styled.div`
   background: #ffffff;
   padding: 24px 16px;
 
@@ -28,10 +28,11 @@ const baseHeaderStyles = css`
     right: 0;
     bottom: 0;
     overflow-y: auto;
+    display: ${(props) => (props.isOpen ? "block" : "none")};
   }
 `;
 
-const buttonStyles = css`
+const Button = styled.button`
   display: none;
 
   @media (max-width: 1000px) {
@@ -56,31 +57,30 @@ const buttonStyles = css`
   }
 `;
 
-function Header() {
+const disableScroll = css`
+  body {
+    overflow: hidden;
+  }
+`;
+
+function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const headerStyles = css`
-    ${baseHeaderStyles}
-
-    @media (max-width: 1000px) {
-      display: ${isOpen ? "block" : "none"};
-    }
-  `;
-
   return (
-    <div css={containerStyles}>
-      <header css={headerStyles}>
+    <Container>
+      <Content isOpen={isOpen}>
+        {isOpen && <Global styles={disableScroll} />}
         <UserInfo />
         <Navigation />
         <Support />
-      </header>
-      <button onClick={() => setIsOpen(!isOpen)} css={buttonStyles}>
+      </Content>
+      <Button onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 }
 
-export default Header;
+export default SideBar;

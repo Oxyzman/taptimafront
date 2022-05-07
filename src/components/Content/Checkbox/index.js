@@ -1,13 +1,12 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const containerStyles = css`
+const Container = styled.label`
   display: flex;
   align-items: flex-start;
   cursor: pointer;
 `;
 
-const checkboxStyles = css`
+const CheckboxContainer = styled.input`
   display: block;
   margin-right: 9px;
   padding-top: 2px;
@@ -15,7 +14,7 @@ const checkboxStyles = css`
   height: 18px;
 `;
 
-const labelStyles = css`
+const Label = styled.span`
   display: block;
   line-height: 24px;
   letter-spacing: 0.15px;
@@ -26,7 +25,7 @@ const labelStyles = css`
   }
 `;
 
-const assistiveTextStyles = css`
+const AssistiveText = styled.span`
   font-size: 12px;
   line-height: 14px;
   color: #66788a;
@@ -34,15 +33,15 @@ const assistiveTextStyles = css`
 
 function Checkbox(props) {
   return (
-    <label css={containerStyles}>
-      <input css={checkboxStyles} name={props.name} type="checkbox" />
+    <Container>
+      <CheckboxContainer name={props.name} type="checkbox" />
       <span>
-        <span css={labelStyles}>{props.label}</span>
+        <Label>{props.label}</Label>
         {props.assistiveText && (
-          <span css={assistiveTextStyles}>{props.assistiveText}</span>
+          <AssistiveText>{props.assistiveText}</AssistiveText>
         )}
       </span>
-    </label>
+    </Container>
   );
 }
 

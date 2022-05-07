@@ -48,7 +48,11 @@ function Notifications() {
     <ContentBlock
       title="Notifications"
       description="Manage the notifications emailing"
-      button={<button css={buttonStyles}>Save</button>}
+      button={
+        <button type="submit" css={buttonStyles}>
+          Save
+        </button>
+      }
     >
       <div css={containerStyles}>
         <section css={checkboxesContainerStyles}>

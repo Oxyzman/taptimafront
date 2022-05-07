@@ -1,11 +1,9 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react';
-import Header from '../Header';
-import TopBar from '../TopBar';
-import Content from '../Content';
+import styled from "@emotion/styled";
+import SideBar from "../SideBar";
+import TopBar from "../TopBar";
+import Content from "../Content";
 
-
-const containerStyles = css`
+const Container = styled.div`
   display: grid;
   grid-template-columns: 270px 1fr;
   grid-template-rows: 64px 1fr;
@@ -18,11 +16,11 @@ const containerStyles = css`
 
 function App() {
   return (
-    <div css={containerStyles}>
+    <Container>
       <TopBar />
-      <Header />
+      <SideBar />
       <Content />
-    </div>
+    </Container>
   );
 }
 

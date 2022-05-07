@@ -1,20 +1,20 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import logoSVG from "./logo.svg";
 
-const containerStyles = css`
+const Container = styled.div`
   display: flex;
   align-items: center;
+  text-decoration: none;
 `;
 
-const imageStyles = css`
+const Image = styled.img`
   display: block;
   width: 36px;
   height: 36px;
   margin-right: 8px;
 `;
 
-const textStyles = css`
+const Text = styled.span`
   color: white;
   font-weight: 500;
   font-size: 20px;
@@ -28,12 +28,10 @@ const textStyles = css`
 
 function Logo() {
   return (
-    <div css={containerStyles}>
-      
-      <img css={imageStyles} src={logoSVG} />
-      <span css={textStyles}>Devias Kit</span>
-      
-    </div>
+    <Container as="a" href="/">
+      <Image src={logoSVG} />
+      <Text>Devias Kit</Text>
+    </Container>
   );
 }
 
