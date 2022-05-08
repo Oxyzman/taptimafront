@@ -1,16 +1,15 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import ContentBlock from "../ContentBlock";
 import TextInput from "../TextInput";
 
-const inputsContainerStyles = css`
+const InputsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   width: 100%;
   max-width: 680px;
 `;
-const buttonStyles = css`
+const Button = styled.button`
   background: #1665d8;
   width: 152px;
   height: 40px;
@@ -37,9 +36,9 @@ function ProfileSettings() {
     <ContentBlock
       title="Basic Profile"
       description="The information can be edited from your profile page"
-      button={<button css={buttonStyles}>Save Settings</button>}
+      button={<Button>Save Settings</Button>}
     >
-      <div css={inputsContainerStyles}>
+      <InputsContainer>
         <TextInput
           name="firstName"
           placeholder="First Name"
@@ -56,7 +55,7 @@ function ProfileSettings() {
         <TextInput name="phone" placeholder="Phone" type="tel" />
         <TextInput name="country" placeholder="Country" type="text" />
         <TextInput name="city" placeholder="City" type="text" />
-      </div>
+      </InputsContainer>
     </ContentBlock>
   );
 }

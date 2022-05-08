@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import Link from "../Link";
 import dashHoverSVG from "./dashHover.svg";
 import usersSVG from "./users.svg";
@@ -8,14 +7,14 @@ import authSVG from "./auth.svg";
 import typoSVG from "./typo.svg";
 import iconsSVG from "./icons.svg";
 
-const containerStyles = css`
+const Container = styled.nav`
   margin: 20px 0;
   padding: 25px 0;
   border-top: 1px solid #e4e7eb;
   border-bottom: 1px solid #e4e7eb;
 `;
 
-const listStyles = css`
+const List = styled.ul`
   margin: 0 0;
   padding: 0;
   list-style: none;
@@ -48,8 +47,8 @@ const listStyles = css`
 
 function Navigation() {
   return (
-    <nav css={containerStyles}>
-      <ul css={listStyles}>
+    <Container>
+      <List>
         <li className="active">
           <Link text="Dashboard" url="/dashboard" img={dashHoverSVG} />
         </li>
@@ -68,8 +67,8 @@ function Navigation() {
         <li>
           <Link text="Icons & Images" url="/iconsandimages" img={iconsSVG} />
         </li>
-      </ul>
-    </nav>
+      </List>
+    </Container>
   );
 }
 

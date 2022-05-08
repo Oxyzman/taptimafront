@@ -1,27 +1,26 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const containerStyles = css`
+const Container = styled.section`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background: white;
 `;
 
-const headerStyles = css`
+const Header = styled.header`
   padding: 26px 24px;
 `;
 
-const contentStyles = css`
+const Content = styled.div`
   padding: 24px;
   border-top: 1px solid #e4e7eb;
   border-bottom: 1px solid #e4e7eb;
 `;
 
-const footerStyles = css`
+const Footer = styled.footer`
   padding: 26px 24px;
 `;
 
-const titleTextStyles = css`
+const TitleText = styled.span`
   line-height: 24px;
   letter-spacing: 0.15px;
   color: black;
@@ -29,7 +28,7 @@ const titleTextStyles = css`
   margin-right: 16px;
 `;
 
-const descriptionTextStyles = css`
+const DescriptionText = styled.span`
   font-size: 14px;
   line-height: 16px;
   color: #66788a;
@@ -38,16 +37,16 @@ const descriptionTextStyles = css`
 
 function ContentBlock(props) {
   return (
-    <section css={containerStyles}>
-      <header css={headerStyles}>
-        <span css={titleTextStyles}>{props.title}</span>
-        <span css={descriptionTextStyles}>{props.description}</span>
-      </header>
+    <Container>
+      <Header>
+        <TitleText>{props.title}</TitleText>
+        <DescriptionText>{props.description}</DescriptionText>
+      </Header>
       <form>
-        <div css={contentStyles}>{props.children}</div>
-        <footer css={footerStyles}>{props.button}</footer>
+        <Content>{props.children}</Content>
+        <Footer>{props.button}</Footer>
       </form>
-    </section>
+    </Container>
   );
 }
 

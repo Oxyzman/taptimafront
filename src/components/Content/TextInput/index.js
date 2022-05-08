@@ -1,13 +1,12 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const containerStyles = css`
+const Container = styled.label`
   min-width: 220px;
   max-width: 328px;
   width: 100%;
 `;
 
-const inputStyles = css`
+const Input = styled.input`
   box-sizing: border-box;
   width: 100%;
   font-size: 16px;
@@ -33,7 +32,7 @@ const inputStyles = css`
   }
 `;
 
-const assistiveTextStyles = css`
+const AssistiveText = styled.span`
   display: block;
   font-size: 12px;
   line-height: 16px;
@@ -43,17 +42,16 @@ const assistiveTextStyles = css`
 
 function TextInput(props) {
   return (
-    <label css={containerStyles}>
-      <input
+    <Container>
+      <Input
         name={props.name}
         type={props.type}
         placeholder={props.placeholder}
-        css={inputStyles}
       />
       {props.assistiveText && (
-        <span css={assistiveTextStyles}>{props.assistiveText}</span>
+        <AssistiveText>{props.assistiveText}</AssistiveText>
       )}
-    </label>
+    </Container>
   );
 }
 

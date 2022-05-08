@@ -1,15 +1,14 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import ContentBlock from "../ContentBlock";
 import Checkbox from "../Checkbox";
 
-const containerStyles = css`
+const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 `;
 
-const checkboxesContainerStyles = css`
+const CheckboxesContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -22,7 +21,7 @@ const checkboxesContainerStyles = css`
     margin-bottom: 8px;
   }
 `;
-const buttonStyles = css`
+const Button = styled.button`
   background: white;
   width: 152px;
   height: 40px;
@@ -48,14 +47,10 @@ function Notifications() {
     <ContentBlock
       title="Notifications"
       description="Manage the notifications emailing"
-      button={
-        <button type="submit" css={buttonStyles}>
-          Save
-        </button>
-      }
+      button={<Button type="reset">Save</Button>}
     >
-      <div css={containerStyles}>
-        <section css={checkboxesContainerStyles}>
+      <Container>
+        <CheckboxesContainer>
           <span>Notifications</span>
           <Checkbox name="email" label="Email" />
           <Checkbox
@@ -65,14 +60,14 @@ function Notifications() {
           />
           <Checkbox name="textMessages" label="Text Messages" />
           <Checkbox name="phoneCalls" label="Phone Calls" />
-        </section>
-        <section css={checkboxesContainerStyles}>
+        </CheckboxesContainer>
+        <CheckboxesContainer>
           <span>Messages</span>
           <Checkbox name="email" label="Email" />
           <Checkbox name="pushNotifications" label="Push notifications" />
           <Checkbox name="textMessages" label="Text Messages" />
-        </section>
-      </div>
+        </CheckboxesContainer>
+      </Container>
     </ContentBlock>
   );
 }

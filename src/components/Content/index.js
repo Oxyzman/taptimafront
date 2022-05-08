@@ -1,11 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import Menu from "./Menu";
 import UserInfo from "./UserInfo";
 import ProfileSettings from "./ProfileSettings";
 import Notifications from "./Notifications";
 
-const containerStyles = css`
+const Container = styled.main`
   grid-column: 2/3;
   grid-row: 2/3;
   background: #f2f2f2;
@@ -15,7 +14,7 @@ const containerStyles = css`
   }
 `;
 
-const innerContainerStyles = css`
+const InnerContainer = styled.div`
   display: flex;
   gap: 25px;
   align-items: flex-start;
@@ -26,7 +25,7 @@ const innerContainerStyles = css`
   }
 `;
 
-const innerSecondContainerStyles = css`
+const InnerSecondContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -36,16 +35,16 @@ const innerSecondContainerStyles = css`
 
 function Content() {
   return (
-    <main css={containerStyles}>
+    <Container>
       <Menu />
-      <div css={innerContainerStyles}>
+      <InnerContainer>
         <UserInfo />
-        <div css={innerSecondContainerStyles}>
+        <InnerSecondContainer>
           <ProfileSettings />
           <Notifications />
-        </div>
-      </div>
-    </main>
+        </InnerSecondContainer>
+      </InnerContainer>
+    </Container>
   );
 }
 

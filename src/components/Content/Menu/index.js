@@ -1,13 +1,14 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const containerStyles = css`
+const Container = styled.section`
   display: flex;
   box-shadow: 3px 0 4px rgba(0, 0, 0, 0.3);
   padding: 19px 24px 0;
 `;
 
-const listStyles = css`
+const List = styled.ul`
   display: flex;
   gap: 25px;
   margin: 0;
@@ -36,8 +37,8 @@ const listStyles = css`
 
 function Menu() {
   return (
-    <section css={containerStyles}>
-      <ul css={listStyles}>
+    <Container>
+      <List>
         <li>
           <a href="/profile" className="active">
             Profile
@@ -49,8 +50,8 @@ function Menu() {
         <li>
           <a href="/price">Price Plan</a>
         </li>
-      </ul>
-    </section>
+      </List>
+    </Container>
   );
 }
 

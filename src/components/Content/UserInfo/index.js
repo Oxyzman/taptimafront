@@ -1,21 +1,20 @@
-/** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 import avatarJPG from "./avatar.jpg";
 
-const containerStyles = css`
+const Container = styled.section`
   background: white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   max-width: 381px;
   width: 100%;
 `;
-const blockStyles = css`
+const Block = styled.div`
   display: flex;
   gap: 41px;
   padding: 24px;
   border-bottom: 1px solid #e4e7eb;
 `;
-const userinfoBlockStyles = css`
+const UserinfoBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -24,7 +23,7 @@ const userinfoBlockStyles = css`
   line-height: 28px;
   letter-spacing: -0.06px;
 `;
-const inneruserinfoBlockStyles = css`
+const InneruserinfoBlock = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -34,7 +33,7 @@ const inneruserinfoBlockStyles = css`
   line-height: 20px;
   letter-spacing: -0.05px;
 `;
-const imageStyles = css`
+const Image = styled.img`
   display: block;
   width: 140px;
   height: 140px;
@@ -42,7 +41,7 @@ const imageStyles = css`
   overflow: hidden;
   max-widht: 100%;
 `;
-const buttonStyles = css`
+const ButtonsStyles = styled.footer`
   display: flex;
   gap: 58px;
   margin: 10px 24px;
@@ -69,22 +68,26 @@ const buttonStyles = css`
 
 function UserInfo() {
   return (
-    <section css={containerStyles}>
-      <div css={blockStyles}>
-        <div css={userinfoBlockStyles}>
+    <Container>
+      <Block>
+        <UserinfoBlock>
           <span>Adrian Stefan</span>
-          <div css={inneruserinfoBlockStyles}>
+          <InneruserinfoBlock>
             <span>Rm. Valcea, Romania</span>
             <span>4:32PM (GMT-4)</span>
-          </div>
-        </div>
-        <img src={avatarJPG} alt="Аватар пользователя" css={imageStyles} />
-      </div>
-      <footer css={buttonStyles}>
+          </InneruserinfoBlock>
+        </UserinfoBlock>
+        <Image
+          src={avatarJPG}
+          alt="User avatar
+				;"
+        />
+      </Block>
+      <ButtonsStyles>
         <button>Upload Picture</button>
         <button>Remove Picture</button>
-      </footer>
-    </section>
+      </ButtonsStyles>
+    </Container>
   );
 }
 
