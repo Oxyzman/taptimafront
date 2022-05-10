@@ -3,7 +3,7 @@ import ButtonStyles from "./styles";
 function Button(props) {
   return (
     <ButtonStyles type="button">
-      <img src={props.icon} />
+      <img src={props.icon} alt={props.text} />
     </ButtonStyles>
   );
 }

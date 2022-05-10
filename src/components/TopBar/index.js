@@ -9,8 +9,8 @@ function TopBar() {
     <Container>
       <Logo />
       <ButtonsContainer>
-        <Button icon={notificationSvg} />
-        <Button icon={exitSvg} />
+        <Button icon={notificationSvg} text="Notification" />
+        <Button icon={exitSvg} text="Exit" />
       </ButtonsContainer>
     </Container>
   );
